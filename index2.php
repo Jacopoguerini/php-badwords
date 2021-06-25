@@ -1,0 +1,32 @@
+<?php
+
+    $text = "Tuttavia, perché voi intendiate da dove sia nato tutto questo errore, di quelli che incolpano il piacere ed esaltano il dolore, io spiegherò tutta la questione, e presenterò le idee espresse dal famoso esploratore della verità, vorrei quasi dire dal costruttore della felicità umana. Nessuno, infatti, detesta, odia, o rifugge il piacere in quanto tale, solo perché è piacere, ma perché grandi sofferenze colpiscono quelli che non sono capaci di raggiungere il piacere attraverso la ragione; e al contrario, non c'è nessuno che ami, insegua, voglia raggiungere il dolore in se stesso, soltanto perché è dolore, ma perché qualche volta accadono situazioni tali per cui attraverso la sofferenza o il dolore si cerca di raggiungere un qualche grande piacere. Concentrandoci su casi di piccola importanza: chi di noi intraprende un esercizio ginnico, se non per ottenerne un qualche vantaggio? E d'altra parte, chi avrebbe motivo di criticare colui che desidera provare un piacere cui non segua nessun fastidio, o colui che fugge un dolore che non produce nessun piacere?
+    Al contrario, però, noi con indignazione denunciamo e riteniamo meritevoli di odio quelli che, rammolliti e corrotti dai piaceri del momento, accecati dal desiderio, non prevedono a quali dolori e a quali sofferenze andranno incontro, e uguale colpa hanno quelli che abbandonano i propri doveri per pigrizia d'animo, cioè per evitare le fatiche e i dolori. Certamente è facile e rapido distinguere questi casi. Infatti nel tempo libero, quando abbiamo tutta la nostra possibilità di scegliere e niente ci ostacola dal fare ciò che ci piace di più, bisogna accogliere ogni piacere e respingere ogni dolore. Ma in altri momenti, o nei doveri inevitabili o negli obblighi che ci vengono dalle circostanze, spesso accadrà che si debba respingere il piacere e accogliere il fastidio. E così il saggio si regola scegliendo tra questi atteggiamenti, facendo in modo che o – respingendo il piacere – ne ottenga di più grandi, o – sopportando il dolore – ne eviti di peggiori.";
+
+    $badwords = ["nessuno", "noi", "infatti"];
+
+    $censoredText = str_ireplace($badwords, "***", $text);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHP Badwords 2</title>
+    </head>
+    <body>
+
+        <h1>Testo completo</h1>
+        <p> <?php echo $text ?> </p>
+
+        <!-- <p>le parole censurate sono <?php var_dump($badwords)  ?></p> -->
+
+        
+        <h1>Testo con parole fisse censurate</h1>
+        <p> <?php echo $censoredText ?> </p>
+
+    </body>
+</html>
